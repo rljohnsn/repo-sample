@@ -29,8 +29,8 @@ body:
       description: Describe the tangible items or capabilities provided by this feature.
       placeholder: |
         Create a list of deliverables about your feature request.
-        - [] deliverable 1
-        - [] deliverable 2
+        - [ ] deliverable 1
+        - [ ] deliverable 2
     validations:
       required: true
   - type: textarea
