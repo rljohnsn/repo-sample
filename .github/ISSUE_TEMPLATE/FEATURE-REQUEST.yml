@@ -4,7 +4,7 @@ title: "💡 [REQUEST] - <title>"
 labels: [
   "enhancement"
 ]
-projects: [ 1 ]
+projects: [ "rljohnsn/1"]
 body:
   - type: textarea
     id: summary
