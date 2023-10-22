@@ -12,9 +12,22 @@ body:
       label: "Summary"
       description: Provide a brief explanation of the feature
       placeholder: |
-        Describe in a few lines your feature request. 
+        ## Describe in a few lines your feature request. 
 
-        > As a <persona> I want the ability to <verb> these <objects/actions>
+        ## Motivation
+        > As a <persona>,
+        > I want the ability to <verb> these <objects/actions>,
+        > so that <purpose>
+
+        ## Specification
+        Here you can go into more details and even potential psuedo code
+        
+        ```hcl
+        resource "aws_instance" "ec2" {
+          ami               = var.ami
+          availability_zone = var.availability_zone
+        } 
+        ```
 
     validations:
       required: true
