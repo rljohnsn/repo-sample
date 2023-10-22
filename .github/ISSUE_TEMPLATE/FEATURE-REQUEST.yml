@@ -1,10 +1,10 @@
 name: "💡 Feature Request"
-description: Create a new ticket for a new feature request
+description: Create a new feature request
 title: "💡 [REQUEST] - <title>"
 labels: [
   "enhancement"
 ]
-projects: [ "@rljohnsn's kanban"]
+projects: [ "@rljohnsn's kanban" ]
 body:
   - type: textarea
     id: summary
@@ -18,6 +18,8 @@ body:
     id: priority
     attributes:
       label: "Priority"
+      description: Set the requests priority
+      placehoder: High
     validations:
       required: true
   - type: input
