@@ -15,7 +15,7 @@ body:
         Describe in a few lines your feature request. 
 
         > As a <persona> I want the ability to <verb> these <objects/actions>
-        
+
     validations:
       required: true
   - type: input
@@ -33,8 +33,10 @@ body:
       description: Describe the tangible items or capabilities provided by this feature.
       placeholder: |
         Create a list of deliverables about your feature request.
+
         - [ ] deliverable 1
         - [ ] deliverable 2
+
     validations:
       required: true
   - type: textarea
@@ -42,7 +44,12 @@ body:
     attributes:
       label: "Acceptance Criteria"
       description: How would someone indepently confirm the features deliverables ?
-      placeholder: Create a list describing ways to confirm your feature request
+      placeholder: |
+        Create a list describing ways to confirm your feature request
+
+        - [ ] how to validate deliverable 1
+        - [ ] how to validate deliverable 2
+        
     validations:
       required: true
   - type: textarea
