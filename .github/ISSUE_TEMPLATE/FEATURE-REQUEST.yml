@@ -1,6 +1,6 @@
 name: "💡 Feature Request"
 description: Create a new feature request
-title: "💡 [REQUEST] - <title>"
+title: "💡 [FR] - As a <persona> I want the ability to <verb> these <objects/actions>"
 labels: [
   "enhancement"
 ]
@@ -52,14 +52,6 @@ body:
         
     validations:
       required: true
-  - type: textarea
-    id: unresolved_question
-    attributes:
-      label: "Unresolved questions"
-      description: What questions still remain unresolved ?
-      placeholder: Identify any unresolved issues.
-    validations:
-      required: false
   - type: textarea
     id: implementation_pr
     attributes:
