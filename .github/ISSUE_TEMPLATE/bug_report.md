@@ -4,6 +4,7 @@ about: Create a report to help us improve
 title: "[BUG] - Description"
 labels: bug
 assignees: ''
+projects: [ 'rljohnsn/1' ]
 
 ---
 
