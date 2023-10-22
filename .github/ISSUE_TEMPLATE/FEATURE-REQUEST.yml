@@ -11,7 +11,11 @@ body:
     attributes:
       label: "Summary"
       description: Provide a brief explanation of the feature
-      placeholder: Describe in a few lines your feature request
+      placeholder: |
+        Describe in a few lines your feature request. 
+
+        > As a <persona> I want the ability to <verb> these <objects/actions>
+        
     validations:
       required: true
   - type: input
