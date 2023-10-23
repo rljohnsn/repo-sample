@@ -27,9 +27,7 @@ body:
           ami               = var.ami
           availability_zone = var.availability_zone
         } 
-        ```
-        "
-
+        ``` "
     validations:
       required: true
   - type: input
@@ -50,7 +48,6 @@ body:
 
         - [ ] deliverable 1
         - [ ] deliverable 2
-
     validations:
       required: true
   - type: textarea
@@ -63,7 +60,6 @@ body:
 
         - [ ] how to validate deliverable 1
         - [ ] how to validate deliverable 2
-        
     validations:
       required: true
   - type: textarea
