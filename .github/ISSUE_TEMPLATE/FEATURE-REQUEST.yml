@@ -8,6 +8,8 @@ projects: [ "rljohnsn/1"]
 body:
   - type: textarea
     id: summary
+    validations:
+      required: true
     attributes:
       label: "Summary"
       description: Provide a brief explanation of the feature
@@ -28,8 +30,6 @@ body:
           availability_zone = var.availability_zone
         } 
         ``` "
-    validations:
-      required: true
   - type: input
     id: start_date
     attributes:
@@ -40,6 +40,8 @@ body:
       required: false
   - type: textarea
     id: deliverables
+    validations:
+      required: true
     attributes:
       label: "Deliverables"
       description: Describe the tangible items or capabilities provided by this feature.
@@ -48,10 +50,10 @@ body:
 
         - [ ] deliverable 1
         - [ ] deliverable 2
-    validations:
-      required: true
   - type: textarea
     id: acceptance_criteria
+    validations:
+      required: true
     attributes:
       label: "Acceptance Criteria"
       description: How would someone indepently confirm the features deliverables ?
@@ -60,8 +62,6 @@ body:
 
         - [ ] how to validate deliverable 1
         - [ ] how to validate deliverable 2
-    validations:
-      required: true
   - type: textarea
     id: implementation_pr
     attributes:
