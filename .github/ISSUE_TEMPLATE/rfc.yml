@@ -1,0 +1,133 @@
+name: "💡 Request for Comments (RFC)"
+description: "Propose a new feature, policy, or major change to the project."
+title: "[RFC] <A concise title for your proposal>"
+labels: ["proposal"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📌 RFC Submission
+        Thank you for submitting an RFC! Please fill out the details below.
+  
+  - type: input
+    id: author
+    attributes:
+      label: "📝 Author(s)"
+      description: "GitHub handle(s) of the author(s) (e.g., @your-handle)"
+      placeholder: "@github-handle"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: "📌 Status"
+      description: "Current status of the RFC"
+      options:
+        - Proposal
+        - Discussion
+        - Approved
+        - Rejected
+        - Implementing
+        - Completed
+    validations:
+      required: true
+
+  - type: input
+    id: created-date
+    attributes:
+      label: "📅 Created Date"
+      description: "Date when the RFC was created (YYYY-MM-DD)"
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "🎯 Summary"
+      description: "A brief one-paragraph summary of the proposed change."
+      placeholder: "Provide a high-level overview of the RFC."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "🔍 Motivation"
+      description: "Why is this RFC needed? What problem does it solve?"
+      placeholder: |
+        - Describe the problem or inefficiency.
+        - Explain why existing solutions are insufficient.
+        - Provide real-world examples or use cases.
+    validations:
+      required: true
+
+  - type: textarea
+    id: design
+    attributes:
+      label: "🛠️ Detailed Design"
+      description: "A technical breakdown of how this RFC should be implemented."
+      placeholder: |
+        - New features or APIs
+        - Changes to existing components
+        - Infrastructure or dependency considerations
+        - Security, performance, or compatibility concerns
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "⚖️ Alternatives Considered"
+      description: "Describe alternative approaches and why they were not chosen."
+      placeholder: |
+        - **Option 1:** Pros & Cons
+        - **Option 2:** Pros & Cons
+    validations:
+      required: false
+
+  - type: textarea
+    id: drawbacks
+    attributes:
+      label: "🚧 Drawbacks & Risks"
+      description: "What are the potential downsides of this proposal?"
+      placeholder: |
+        - Impact on backward compatibility
+        - Performance concerns
+        - Adoption challenges
+    validations:
+      required: false
+
+  - type: textarea
+    id: unresolved
+    attributes:
+      label: "❓ Unresolved Questions"
+      description: "List any open concerns or aspects that need further discussion."
+      placeholder: |
+        - Question 1
+        - Question 2
+    validations:
+      required: false
+
+  - type: textarea
+    id: next-steps
+    attributes:
+      label: "✅ Next Steps"
+      description: "Actions needed to move forward."
+      placeholder: |
+        1. Community discussion
+        2. Iterating on feedback
+        3. Decision by maintainers
+        4. Implementation tracking
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### 📣 Feedback & Discussion
+        Please add comments below with feedback, suggestions, or concerns.
+
+        _Thank you for contributing to the project's growth! 🎉_
