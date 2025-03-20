@@ -1,5 +1,5 @@
 ---
-name: "💡 Request for Comments (RFC)"
+name: "💡 Request for Comments (RFC) Markdown"
 about: "Propose a new feature, policy, or major change to the project."
 title: "[RFC] <A concise title for your proposal>"
 labels: ["proposal"]
