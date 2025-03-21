@@ -34,14 +34,6 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: created-date
-    attributes:
-      label: "📅 Created Date"
-      description: "Date when the RFC was created (YYYY-MM-DD)"
-      placeholder: "YYYY-MM-DD"
-    validations:
-      required: true
 
   - type: textarea
     id: summary
@@ -74,6 +66,19 @@ body:
         - Changes to existing components
         - Infrastructure or dependency considerations
         - Security, performance, or compatibility concerns
+    validations:
+      required: true
+      
+  - type: textarea
+    id: next-steps
+    attributes:
+      label: "✅ Next Steps"
+      description: "Actions needed to move forward."
+      placeholder: |
+        1. Community discussion
+        2. Iterating on feedback
+        3. Decision by maintainers
+        4. Implementation tracking
     validations:
       required: true
 
@@ -111,18 +116,15 @@ body:
     validations:
       required: false
 
-  - type: textarea
-    id: next-steps
+
+  - type: input
+    id: created-date
     attributes:
-      label: "✅ Next Steps"
-      description: "Actions needed to move forward."
-      placeholder: |
-        1. Community discussion
-        2. Iterating on feedback
-        3. Decision by maintainers
-        4. Implementation tracking
+      label: "📅 Created Date"
+      description: "Date when the RFC was created (YYYY-MM-DD)"
+      placeholder: "YYYY-MM-DD"
     validations:
-      required: true
+      required: false
 
   - type: markdown
     attributes:
