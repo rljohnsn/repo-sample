@@ -8,6 +8,8 @@ jobs:
   update-fields:
     if: contains(github.event.issue.labels.*.name, 'RFC')
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - name: Get issue author and current date
         id: vars
