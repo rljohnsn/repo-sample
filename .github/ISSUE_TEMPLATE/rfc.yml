@@ -10,14 +10,6 @@ body:
         ## 📌 RFC Submission
         Thank you for submitting an RFC! Please fill out the details below.
   
-  - type: input
-    id: author
-    attributes:
-      label: "📝 Author(s)"
-      description: "GitHub handle(s) of the author(s) (e.g., @your-handle)"
-      placeholder: "@github-handle"
-    validations:
-      required: true
 
   - type: dropdown
     id: status
@@ -121,6 +113,14 @@ body:
     validations:
       required: false
 
+  - type: input
+    id: author
+    attributes:
+      label: "📝 Author(s)"
+      description: "GitHub handle(s) of the author(s) (e.g., @your-handle)"
+      placeholder: "@github-handle"
+    validations:
+      required: false
 
   - type: input
     id: created-date
