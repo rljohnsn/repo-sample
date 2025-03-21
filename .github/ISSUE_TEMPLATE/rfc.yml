@@ -53,6 +53,11 @@ body:
         - Describe the problem or inefficiency.
         - Explain why existing solutions are insufficient.
         - Provide real-world examples or use cases.
+
+        > As a <persona>,
+        > I want the ability to <verb> these <objects/actions>,
+        > so that <purpose>
+
     validations:
       required: true
 
@@ -75,10 +80,10 @@ body:
       label: "✅ Next Steps"
       description: "Actions needed to move forward."
       placeholder: |
-        1. Community discussion
-        2. Iterating on feedback
-        3. Decision by maintainers
-        4. Implementation tracking
+        - [ ] Community discussion
+        - [ ] Iterating on feedback
+        - [ ] Decision by maintainers
+        - [ ] Implementation tracking
     validations:
       required: true
 
