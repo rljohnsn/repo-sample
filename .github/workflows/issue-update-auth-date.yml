@@ -1,0 +1,59 @@
+name: "Append Author & Set Created Date"
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  update-fields:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get issue author and current date
+        id: vars
+        run: |
+          echo "AUTHOR=${{ github.actor }}" >> $GITHUB_ENV
+          echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Fetch existing issue body
+        uses: actions/github-script@v6
+        id: get-issue
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue_number = context.payload.issue.number;
+            const { data: issue } = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number
+            });
+            return issue.body;
+
+      - name: Append author and set created date
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue_number = context.payload.issue.number;
+            let body = `${{ steps.get-issue.outputs.result }}`;
+            const author = `@${process.env.AUTHOR}`;
+            const date = process.env.DATE;
+
+            // Append author
+            const authorPattern = /### 📝 Author\(s\)\n(.*?)(?=\n###|$)/s;
+            if (authorPattern.test(body)) {
+              body = body.replace(authorPattern, (match, authors) => {
+                return `### 📝 Author(s)\n${authors.trim()}, ${author}`;
+              });
+            } else {
+              body = `### 📝 Author(s)\n${author}\n\n` + body;
+            }
+
+            // Set Created Date
+            body = body.replace(/### 📅 Created Date\n(.*?)(?=\n###|$)/s, `### 📅 Created Date\n${date}`);
+
+            github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              body: body
+            });
