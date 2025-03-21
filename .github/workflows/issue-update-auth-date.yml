@@ -48,7 +48,7 @@ jobs:
                 return `### 📝 Author(s)\n${authors.trim()}, ${author}`;
               });
             } else {
-              body = `### 📝 Author(s)\n${author}\n\n` + body;
+              body = `### 📝 Author(s)\n${author}\n\n ${body}`;
             }
 
             // Set Created Date
