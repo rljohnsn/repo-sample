@@ -45,10 +45,10 @@ jobs:
             const authorPattern = /Author\(s\):\*\* (.*?)(?=\n###|$)/s;
             if (authorPattern.test(body)) {
               body = body.replace(authorPattern, (match, authors) => {
-                return `Author(s)\n${authors.trim()}, ${author}`;
+                return `Author(s):** ${authors.trim()}, ${author}`;
               });
             } else {
-              body = `Author(s)\n${author}\n\n ${body.slice(1, -1)}`;
+              body = `**Author(s):** ${author}\n ${body.slice(1, -1)}`;
             }
 
             // Set Created Date
