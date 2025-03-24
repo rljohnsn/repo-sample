@@ -42,7 +42,7 @@ jobs:
             const date = process.env.DATE;
 
             // Append author
-            const authorPattern = /Author\(s\)\n(.*?)(?=\n###|$)/s;
+            const authorPattern = /Author\(s\):\*\* (.*?)(?=\n###|$)/s;
             if (authorPattern.test(body)) {
               body = body.replace(authorPattern, (match, authors) => {
                 return `Author(s)\n${authors.trim()}, ${author}`;
