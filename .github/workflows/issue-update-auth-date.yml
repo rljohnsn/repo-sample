@@ -52,7 +52,7 @@ jobs:
             }
 
             // Set Created Date
-            body = body.replace(/Created Date:(.*?)(?=\n|$)/s, `Created Date:** ${date}`);
+            body.replace(/Created Date:(.*?)(?=\n|$)/s, `Created Date:** ${date}`);
 
             github.rest.issues.update({
               owner: context.repo.owner,
